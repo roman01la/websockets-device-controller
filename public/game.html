@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <h1 style="font-size:100px;">Rotate device to control the ball</h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect(window.location.hostname);
+
+      window.addEventListener('deviceorientation', function (e) {
+          socket.emit('orientation', { z: e.alpha, y: e.gamma, x: e.beta });
+      }, false);
+    </script>
+
+  </body>
+</html>
