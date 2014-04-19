@@ -3,10 +3,8 @@ var express = require('express'),
     server = require('http').Server(app),
     io = require('socket.io').listen(server);
 
-app.configure(function() {
-  app.use(express['static']('' + __dirname + '/public'));
-  return app.set('port', process.env.PORT || 3000);
-});
+app.set('port', process.env.PORT || 3000);
+app.use(express.static(__dirname + '/public'));
 
 io.sockets.on('connection', function (socket) {
 

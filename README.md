@@ -4,10 +4,13 @@ Device as a controller
 WebGL demo powered by WebSockets and device accelerometer data to control things on the web.
 
 Clone repo and run:
-<pre><code>cd websockets-device-controller && npm install</code></pre>
+```
+cd websockets-device-controller && npm install && bower install
+```
 
-Navigate from the desktop browser to <code><a href="http://localhost:3000">http://localhost:3000</a></code>
-From your device to <code><a href="http://localhost:3000/game.html">http://localhost:3000/game.html</a></code>
+Run server with `node app.js`.
+
+Navigate from the desktop browser to [`http://localhost:3000`](http://localhost:3000). From your device to [`http://localhost:3000/game/`](http://localhost:3000/game/).
 
 Rotate device to control the ball.
 
